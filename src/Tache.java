@@ -2,6 +2,11 @@ public abstract class Tache {
     private String nom;
     private int cout;
 
+    public Tache(String nom, int cout) {
+        this.nom = nom;
+        this.cout = cout;
+    }
+
     public void add(Tache component) {
         throw new UnsupportedOperationException();
     }

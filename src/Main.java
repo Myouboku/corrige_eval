@@ -34,5 +34,8 @@ public class Main {
         Provider p = new ProtectionProxy(invoiceProxy, "1234");
         run(p);
         System.out.println(">>> Coût total avec authentification : " + invoiceProxy.totalCost());
+
+        TacheComplexe tache1 = new TacheComplexe("Tache 1", 10);
+        tache1.add(new Tache("Tache 1.1", 5));
     }
 }
