@@ -36,6 +36,15 @@ public class Main {
         System.out.println(">>> Coût total avec authentification : " + invoiceProxy.totalCost());
 
         TacheComplexe tache1 = new TacheComplexe("Tache 1", 10);
-        tache1.add(new Tache("Tache 1.1", 5));
+        tache1.add(new TacheElementaire("Tache 1.1", 5));
+        tache1.add(new TacheElementaire("Tache 1.2", 9));
+        tache1.add(new TacheElementaire("Tache 1.3", 13));
+        tache1.description();
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>");
+        TacheComplexe tache2 = new TacheComplexe("Tache 2", 20);
+        tache2.add(new TacheElementaire("Tache 2.1", 31));
+        tache2.add(new TacheElementaire("Tache 2.2", 7));
+        tache2.add(tache1);
+        tache2.description();
     }
 }

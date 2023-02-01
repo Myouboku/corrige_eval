@@ -6,8 +6,7 @@ public class TacheComplexe extends Tache implements Iterable<Tache> {
     private final Collection<Tache> taches;
 
     public TacheComplexe(String nom, int cout) {
-        super.setNom(nom);
-        super.setCout(cout);
+        super(nom, cout);
         this.taches = new ArrayList<>();
     }
 
@@ -28,7 +27,7 @@ public class TacheComplexe extends Tache implements Iterable<Tache> {
         System.out.print("Les taches qui la composent: ");
 
         for (Tache t : this) {
-            System.out.print(t.getNom() + ", ");
+            t.description();
         }
         System.out.println();
     }
